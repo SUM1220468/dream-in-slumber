@@ -2,7 +2,7 @@
   'use strict';
 
   /* ===== 路由：hash 切换页面 ===== */
-  var routes = ['home', 'rules', 'beginner', 'squad', 'warframes', 'weapons', 'slang'];
+  var routes = ['home', 'rules', 'beginner', 'squad', 'warframes', 'slang'];
   var pages = {};
   var navItems = {};
 
