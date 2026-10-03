@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dream in Slumber · 星际战甲氏族指南</title>
+<meta name="description" content="Dream in Slumber 星际战甲氏族——氏族介绍、氏族与QQ群规则、萌新攻略、后期车队攻略、战甲与武器刷取攻略。">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- 虚空星座背景 -->
+<canvas id="voidField" aria-hidden="true"></canvas>
+
+<!-- ===== 侧边导航 ===== -->
+<aside class="sidebar" id="sidebar">
+  <div class="brand">
+    <div class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L14.2 9.8 L22 12 L14.2 14.2 L12 22 L9.8 14.2 L2 12 L9.8 9.8 Z"/><circle cx="12" cy="12" r="1.8"/></svg>
+    </div>
+    <div class="brand-text">
+      <div class="brand-name">DREAM IN SLUMBER</div>
+      <div class="brand-sub">睡梦中的逐梦者</div>
+    </div>
+  </div>
+
+  <nav class="nav" id="nav">
+    <a class="nav-item" href="#home" data-route="home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.7 2.3L22 18l-2.3.7L19 21l-.7-2.3L16 18l2.3-.7z"/></svg>
+      <span>氏族介绍</span>
+    </a>
+    <a class="nav-item" href="#rules" data-route="rules">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+      <span>氏族与QQ群规则</span>
+    </a>
+    <a class="nav-item" href="#beginner" data-route="beginner">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>
+      <span>萌新攻略</span>
+    </a>
+    <a class="nav-item" href="#squad" data-route="squad">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3 2.9-5 5.5-5s4.9 2 5.5 5"/><circle cx="17" cy="9" r="2.6"/><path d="M15.5 14.4c2.2.4 4 2.1 4.6 4.6"/></svg>
+      <span>后期车队攻略</span>
+    </a>
+    <a class="nav-item" href="#warframes" data-route="warframes">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 3.5V8l3 3.5V14l-6 8-6-8v-2.5L9 8V5.5z"/><path d="M12 2v20"/></svg>
+      <span>战甲刷取攻略</span>
+    </a>
+    <a class="nav-item" href="#weapons" data-route="weapons">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20L20 4"/><path d="M15 3l6 6-3 1-4 4-1 3z"/><path d="M8 12l-4 4 2 2 4-4"/></svg>
+      <span>武器刷取攻略</span>
+    </a>
+    <a class="nav-item" href="#slang" data-route="slang">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.2 0-2.4-.2-3.4-.7L3 21l1.7-6.1a8.5 8.5 0 1 1 16.3-3.4z"/><path d="M8.5 12h.01M12.5 12h.01M16.5 12h.01"/></svg>
+      <span>游戏黑话</span>
+    </a>
+  </nav>
+
+  <div class="sidebar-foot">
+    <div class="foot-line">以梦为舟 · 逐梦星图</div>
+    <div class="foot-line faint">Dream in Slumber</div>
+  </div>
+</aside>
+
+<!-- ===== 主内容 ===== -->
+<main class="content" id="content">
+
+  <!-- ============ 氏族介绍 ============ -->
+  <section class="page" id="page-home" data-route="home">
+    <div class="hero" style="background-image:url('assets/hero.jpg')">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <div class="hero-eyebrow">虚空之声 · WARFRAME 氏族</div>
+        <h1 class="hero-title">DREAM IN SLUMBER</h1>
+        <div class="hero-sub">睡梦中的逐梦者</div>
+        <p class="hero-tag">我们沉睡于虚空，为每一个初醒的 Tenno 点亮归途。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#beginner">萌新从这里开始</a>
+          <a class="btn btn-ghost" href="#rules">了解氏族规则</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <h2 class="sec-title">关于氏族</h2>
+      <p class="lead">Dream in Slumber（中文可译作「梦中沉睡 / 睡梦中的逐梦者」），是一支以<b>萌新友好</b>与<b>后期车队</b>并重的星际战甲氏族。我们相信：每一个初入星图的天诺，都像「第二梦」里沉睡初醒的梦者——需要的不是催促，而是一个温暖、清晰、可依靠的归处。</p>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V6z"/></svg></div>
+          <h3>萌新友好</h3>
+          <p>有人带、有攻略、不催进度。从「第一台战甲」到「第一桶白金」，老玩家全程陪跑。</p>
+        </div>
+        <div class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3 2.9-5 5.5-5s4.9 2 5.5 5"/><circle cx="17" cy="9" r="2.6"/><path d="M15.5 14.4c2.2.4 4 2.1 4.6 4.6"/></svg></div>
+          <h3>后期车队</h3>
+          <p>深空高波、夜灵狩猎、钢铁之路固定车队，分工明确、配合默契，带新手开眼界。</p>
+        </div>
+        <div class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></div>
+          <h3>研究齐全</h3>
+          <p>氏族道场研究完备（天诺实验室等），战甲、武器蓝图随时复制，少走弯路。</p>
+        </div>
+        <div class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>纯净氛围</h3>
+          <p>禁引战、禁脚本、禁外挂，交易讲诚信。让星图上的每一次组队都舒服、干净。</p>
+        </div>
+      </div>
+
+      <div class="banner" style="background-image:url('assets/void-hall.jpg')">
+        <div class="banner-overlay"></div>
+        <div class="banner-inner">
+          <h3>为什么叫「睡梦中的逐梦者」</h3>
+          <p>在星际战甲的故事里，Tenno 正是沉睡于转储舱中的「梦者」——他们以意识操纵战甲行走星图，在「第二梦」中苏醒。Dream in Slumber 取意于此：<b>我们是一群在虚空中沉睡、却在星图上并肩苏醒的逐梦者</b>。名字是归宿，也是每一个刚睁眼的天诺的承诺。</p>
+        </div>
+      </div>
+
+      <h2 class="sec-title">加入我们</h2>
+      <div class="join-card">
+        <div class="join-info">
+          <h3>加入 QQ 群</h3>
+          <p class="join-number">群号：<b>849759324</b></p>
+          <p>扫码入群，群内有专人核对信息并发放游戏内氏族邀请。</p>
+        </div>
+        <div class="join-qr">
+          <img src="assets/qq-group.png" alt="Dream in Slumber QQ群二维码">
+        </div>
+      </div>
+      <div class="note">本页为氏族指南站，具体入会邀请与实时招募请在 QQ 群内登记确认。</div>
+    </div>
+  </section>
+
+  <!-- ============ 氏族与QQ群规则 ============ -->
+  <section class="page" id="page-rules" data-route="rules">
+    <div class="page-head">
+      <div class="wrap">
+        <div class="kicker">STANDARDS</div>
+        <h1>氏族与 QQ 群规则</h1>
+        <p class="lead">规则不是束缚，而是让每个族人玩得舒服的公约。请新老族人都读一遍。</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <h2 class="sec-title">氏族规则（游戏内）</h2>
+      <ol class="rule-list">
+        <li>
+          <div class="rule-ic"><span>01</span></div>
+          <div class="rule-body"><h3>活跃与回归</h3><p>长期不上线请提前说明；长期潜水可能被移出氏族，随时可申请回归，欢迎常回来看看。</p></div>
+        </li>
+        <li>
+          <div class="rule-ic"><span>02</span></div>
+          <div class="rule-body"><h3>贡献与研究</h3><p>鼓励参与氏族道场研究捐献，量力而行、不急不赶；研究是大家一起攒出来的家底。</p></div>
+        </li>
+        <li>
+          <div class="rule-ic"><span>03</span></div>
+          <div class="rule-body"><h3>交易诚信</h3><p>交易不欺诈、不虚假宣传、不抬价宰新人。价格问题理性沟通，谈不拢可以不做。</p></div>
+        </li>
+        <li>
+          <div class="rule-ic"><span>04</span></div>
+          <div class="rule-body"><h3>公平游戏</h3><p>严禁外挂、脚本、利用严重漏洞牟利。一经查实直接移出，绝不姑息。</p></div>
+        </li>
+        <li>
+          <div class="rule-ic"><span>05</span></div>
+          <div class="rule-body"><h3>互相尊重</h3><p>不侮辱、不歧视、不开地图炮。对事不对人，游戏里争个高下，下了线还是兄弟。</p></div>
+        </li>
+        <li>
+          <div class="rule-ic"><span>06</span></div>
+          <div class="rule-body"><h3>团结协作</h3><p>组队不抢资源、不恶意踢人；跨队沟通讲礼貌，赢了一起狂，输了一起扛。</p></div>
+        </li>
+      </ol>
+
+      <h2 class="sec-title">QQ 群规则</h2>
+      <ol class="rule-list">
+        <li>
+          <div class="rule-ic warn"><span>01</span></div>
+          <div class="rule-body"><h3>禁止广告与引流</h3><p>严禁刷屏广告、拉人、代练广告、违规外链。一次提醒，屡犯移出。</p></div>
+        </li>
+        <li>
+          <div class="rule-ic warn"><span>02</span></div>
+          <div class="rule-body"><h3>禁止引战与辱骂</h3><p>观点分歧请理性讨论，禁止人身攻击、地域/性别等歧视言论。和谐第一。</p></div>
+        </li>
+        <li>
+          <div class="rule-ic warn"><span>03</span></div>
+          <div class="rule-body"><h3>交易规范</h3><p>交易请用群内约定格式发布，先确认物品与价格，谨防诈骗；纠纷找管理员介入。</p></div>
+        </li>
+        <li>
+          <div class="rule-ic warn"><span>04</span></div>
+          <div class="rule-body"><h3>提问礼仪</h3><p>先翻群文件与攻略（本指南），再提问；提问时说明自己的段位、进度与卡点，老玩家才好对症下药。</p></div>
+        </li>
+        <li>
+          <div class="rule-ic warn"><span>05</span></div>
+          <div class="rule-body"><h3>机器人使用</h3><p>遵守机器人指令，不在群内刷屏、不当复读机，保持聊天界面清爽。</p></div>
+        </li>
+        <li>
+          <div class="rule-ic warn"><span>06</span></div>
+          <div class="rule-body"><h3>禁止管理滥用职权</h3><p>管理员不得滥用权限；一经查实，第一次降权 + 禁言，第二次直接移出。</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 萌新攻略 ============ -->
+  <section class="page" id="page-beginner" data-route="beginner">
+    <div class="page-head" style="background-image:url('assets/awakening.jpg')">
+      <div class="page-head-overlay"></div>
+      <div class="wrap">
+        <div class="kicker">BEGINNER GUIDE</div>
+        <h1>萌新攻略</h1>
+        <p class="lead">从睁开眼到在星图站稳脚跟，四条路帮你走顺。</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="sub-block" id="b-early">
+        <h2 class="sec-title">一、前期该做什么</h2>
+        <p class="lead">星际战甲前期没有「唯一正确路线」，但有一条最顺的推进主线。照这个顺序走，不迷路、不卡关。</p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-no">01</div>
+            <h3>完成序章，选好初始战甲</h3>
+            <p>完成 Vor's Prize（沃尔的战利品）序章。初始三选一：<b>Excalibur（圣剑）</b>攻守均衡、<b>Mag（磁力）</b>控场、<b>Volt（电男）</b>爆发加速。新手推荐圣剑，容错高。</p>
+          </div>
+          <div class="step">
+            <div class="step-no">02</div>
+            <h3>沿着主线推进剧情</h3>
+            <p>按任务「推荐箭头」顺序走。关键主线：<b>萨娅的守夜</b>→<b>曲翼</b>（解锁平原与飞行翼）→<b>第二梦 The Second Dream</b>（全游戏最重要转折，解锁指挥官/专精/核桃，<b>绝对不要跳过</b>）→<b>内战 The War Within</b>（解锁指挥官能力）→<b>Harrow 的枷锁</b>→<b>牺牲 The Sacrifice</b>→<b>新纪之战 The New War</b>→后续章节（墙中之声、1999 等）。</p>
+          </div>
+          <div class="step">
+            <div class="step-no">03</div>
+            <h3>升级与段位（MR）</h3>
+            <p>把每件战甲/武器升到 30 级（满级）可获得段位经验，段位决定能用的装备与<b>每日交易次数</b>。前期优先升武器补段位，但别为段位硬刷垃圾装备。</p>
+          </div>
+          <div class="step">
+            <div class="step-no">04</div>
+            <h3>开星图节点</h3>
+            <p>推进星图解锁接合点（Junction），接合点任务给大量关键蓝图与奖励，是主线推进的阶梯。</p>
+          </div>
+          <div class="step">
+            <div class="step-no">05</div>
+            <h3>做第一台「好」战甲：Rhino</h3>
+            <p>去<b>金星 Fossa</b>打暗杀 Boss Jackal，掉落 Rhino（犀牛）部件。新手神坦，能扛能输出，先用它安稳度过前期。</p>
+          </div>
+          <div class="step">
+            <div class="step-no">06</div>
+            <h3>攒资源与核桃</h3>
+            <p>边开图边攒材料和核桃（虚空遗物），核桃是后期赚白金和刷 Prime 的钥匙，越早养成囤积习惯越好。</p>
+          </div>
+          <div class="step">
+            <div class="step-no">07</div>
+            <h3>每日必做</h3>
+            <p><b>午夜电波（Nightwave）</b>给大量好物与段位经验；每日签到别断。这两件事花不了几分钟，收益却很稳。</p>
+          </div>
+          <div class="step">
+            <div class="step-no">08</div>
+            <h3>建议培养方向</h3>
+            <p><b>卡利班（Caliban）</b>、<b>猴子（悟空 Wukong）</b>、<b>执法者</b>（灵化近战，配震地猴极好用）、<b>执法者灵化之源</b>（钢铁回廊轮换或商店获取）、<b>尽早解锁大嘴（Helminth）</b>（技能移植）；同时<b>尽快提升扎利曼（驻持者）、科维兽（殁世幽都）、六人组（1999）声望等级</b>，并<b>尽快跑齐 4K mod</b>（火卫二龙钥宝库的腐化 Mod）。这些性价比高、后期也常用，值得优先上手。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-block" id="b-smooth">
+        <h2 class="sec-title">二、如何丝滑度过萌新期</h2>
+        <p class="lead">萌新期最常踩的坑不是打不过，而是「资源花错地方」。记住下面几条，能少走一个月的弯路。</p>
+        <div class="tips">
+          <div class="tip"><h3>槽位最优先</h3><p>免费白金第一笔花在<b>战甲/武器槽位</b>上，这是最值、最不会亏的消费。不要拿白金去买市场里能蓝图做的普通装备。</p></div>
+          <div class="tip"><h3>别乱花白金</h3><p>不冲动交易、不买成品。白金先攒着，留给槽位和真正稀缺的 Prime。</p></div>
+          <div class="tip"><h3>Mod 先于装备</h3><p>先练基础 Mod（伤害、暴击、元素、射速）。<b>Mod 等级比装备本身重要</b>，一张满级 Mod 能顶好几件好武器。</p></div>
+          <div class="tip"><h3>先懂元素组合</h3><p>病毒（毒+冰）、腐蚀（电+毒）、磁力（冰+电）…针对不同敌人换配卡，比无脑堆伤害有效得多。</p></div>
+          <div class="tip"><h3>先懂后做</h3><p>极化（Forma）、专精、紫卡（Riven）先了解概念，别急着花钱砸。时机到了自然懂。</p></div>
+          <div class="tip"><h3>顺手优先</h3><p>不追顶级 Build。先用自己顺手的装备推进，等后期资源自由了再回头补。</p></div>
+          <div class="tip"><h3>找人带</h3><p>在氏族里找老玩家带暗杀、带主线，进度更快，也能学到一手配卡思路。</p></div>
+          <div class="tip"><h3>别急买</h3><p>很多「神装」到后期自然能刷到，前期花钱买 = 替未来付双倍。</p></div>
+        </div>
+      </div>
+
+      <div class="sub-block" id="b-plat">
+        <h2 class="sec-title">三、赚白金</h2>
+        <p class="lead">白金是星际战甲的自由交易货币，不充值也能靠玩法积累。下面是萌新最实用的几条生财之路。</p>
+
+        <div class="plat-methods">
+          <div class="plat-method">
+            <div class="pm-tag">主流</div>
+            <h3>开核桃，卖 Prime 部件</h3>
+            <p>打<b>虚空裂缝</b>任务开裂核桃，得到 Prime 部件。完整套装价值更高（热门/刚出库的圣装一套常在 80–150 白金以上），稀有单件 20–50 白金。用 Warframe Market 等第三方平台比价后再挂单。</p>
+          </div>
+          <div class="plat-method">
+            <div class="pm-tag">稳健</div>
+            <h3>垃圾 Prime 打包（Prime Junk）</h3>
+            <p>金部件低于 10 白金、银部件低于 3 白金的，别单独卖，攒成 <b>6 个一组打包</b>出售，量大从优，是老手也常做的稳定现金流。</p>
+          </div>
+          <div class="plat-method">
+            <div class="pm-tag">进阶</div>
+            <h3>卖稀有 Mod</h3>
+            <p>如成长之力等热门/需求大的 Mod 价格波动大，刷到好价再出手。需要一定库存与对市场的敏感度。</p>
+          </div>
+          <div class="plat-method">
+            <div class="pm-tag">轮换</div>
+            <h3>阿耶精华（Aya）换稀有核桃</h3>
+            <p>阿耶精华本身不可直接交易，但可在商店换取<b>限时出库</b>的稀有核桃。轮换初期稀有核桃单价高，一组阿耶能卖到可观的白金。</p>
+          </div>
+          <div class="plat-method">
+            <div class="pm-tag warn">门槛</div>
+            <h3>交易前提</h3>
+            <p>需要段位 2（MR2）并开启<b>两步验证（2FA）</b>才能交易；每日交易次数 = 当前段位等级。达到门槛前先攒核桃和部件。</p>
+          </div>
+          <div class="plat-method">
+            <div class="pm-tag danger">红线</div>
+            <h3>切勿 RMT / 黑卡</h3>
+            <p>购买第三方黑卡白金有<b>封号风险</b>，别因小失大。一切交易走游戏内正规渠道，先货后款、确认物品。</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <h3>交易防坑三句话</h3>
+          <p>① 先比价再挂单，Warframe Market 是你的价格参照物；② 走游戏内交易界面，别信「先转白金给你」；③ 谈不拢就下一位，好价格永远有。</p>
+        </div>
+      </div>
+
+      <div class="sub-block" id="b-mind">
+        <h2 class="sec-title">四、提高游戏理解</h2>
+        <p class="lead">装备可以借，但「理解」只能自己长。把下面几块核心机制吃透，你就从「会玩」走向「玩明白」了。</p>
+        <div class="cards">
+          <div class="card"><h3>Mod 系统与伤害</h3><p>伤害 = 面板 × Mod × 技能加成。先加基础伤害，再堆元素与暴击；元素组合决定对不同敌人的效率。</p></div>
+          <div class="card"><h3>看懂武器面板</h3><p>重点看暴击率/暴击伤害、触发几率、射速、弹匣与伤害类型。不同武器定位不同，别只看一个数字。</p></div>
+          <div class="card"><h3>专精与指挥官</h3><p>第二梦后解锁专精（Focus），提供回蓝、伤害、保命等被动，是后期车队的关键能力。</p></div>
+          <div class="card"><h3>Prime / 圣装 区别</h3><p>Prime 属性更高、可装更多极化，优先做常用 Prime。普通版是保底与段位来源。</p></div>
+          <div class="card"><h3>核桃机制</h3><p>遗物分古/前/中/后纪。组队「光辉」开核桃效率最高：队里有人开出金/银，全员可选。</p></div>
+          <div class="card"><h3>大嘴的技能移植</h3><p>解锁大嘴（Helminth）后，可将满级战甲的技能移植到其他战甲上，极大拓展配装思路，是后期深度玩法的核心。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 后期车队攻略 ============ -->
+  <section class="page" id="page-squad" data-route="squad">
+    <div class="page-head" style="background-image:url('assets/squad.jpg')">
+      <div class="page-head-overlay"></div>
+      <div class="wrap">
+        <div class="kicker">SQUAD PLAY</div>
+        <h1>后期车队攻略</h1>
+        <p class="lead">组排是星际战甲最核心的乐趣。配合到位，事半功倍。</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="callout">
+        <h3>车队纪律（先读）</h3>
+        <p>进队先报段位、装备与专精；听队长指挥；不抢资源、不恶意挂机、不掉线；友好沟通，输赢都体面。</p>
+      </div>
+
+      <h2 class="sec-title">常见车队场景与分工</h2>
+      <div class="squad-block">
+        <div class="squad-head"><div class="sq-icon">H</div><div><h3>九重天（Railjack）</h3><p>舰载高波攻坚，考验机动、续航与定点输出</p></div></div>
+        <div class="squad-cols">
+          <div class="sq-col"><h4>推荐战甲</h4><ul>
+            <li><b>Jade（翡翠）</b>— 盾位 + 增伤，空中支援强，给全队铺 buff 与治疗</li>
+            <li><b>Wisp（花甲）</b>— 加速 / 攻速 / 治疗，拉满全队机动与续航</li>
+            <li><b>Nidus（豆哥）</b>— 寄生链接高增伤，站桩输出且极难死</li>
+            <li><b>Wukong（悟空）</b>— 分身 + 近战清场，机动灵活、抗压强</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="squad-block">
+        <div class="squad-head"><div class="sq-icon">H</div><div><h3>生存（Survival）</h3><p>长时间生存，刷资源与掉落是核心诉求</p></div></div>
+        <div class="squad-cols">
+          <div class="sq-col"><h4>推荐战甲</h4><ul>
+            <li><b>Wisp（花甲）</b>— 加速 + 治疗，保证全队续航不断</li>
+            <li><b>Nekros（摸尸）</b>— 三技能掉落加成，刷资源的绝对核心</li>
+            <li><b>Nidus（豆哥）</b>— 高生存 + 增伤，站得住也打得动</li>
+            <li><b>Ivara（伊瓦拉）</b>— 隐身潜行不引怪，定点高效清场</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="squad-block">
+        <div class="squad-head"><div class="sq-icon">H</div><div><h3>防御（Defense）</h3><p>守住目标、压制波次，清场与控场并重</p></div></div>
+        <div class="squad-cols">
+          <div class="sq-col"><h4>推荐战甲</h4><ul>
+            <li><b>任意地图炮能力战甲</b>— 大范围清场，稳住目标区（如 Saryn / Mesa 等）</li>
+            <li><b>Wisp（花甲）</b>— 加速治疗，稳定目标区火力覆盖</li>
+            <li><b>Nidus（豆哥）</b>— 增伤 + 聚怪，控制波次节奏</li>
+            <li><b>Nova（新星）</b>— 分子填充减速控场，压住波次推进</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="squad-block">
+        <div class="squad-head"><div class="sq-icon">A</div><div><h3>仲裁（Arbitration）</h3><p>高难耐久场景，考验输出、生存与配合</p></div></div>
+        <div class="squad-cols">
+          <div class="sq-col"><h4>推荐编队</h4><ul>
+            <li><b>Cyte-09（主机）</b>— 狙击弱点流，定点高输出压节奏</li>
+            <li><b>Cyte-09（客机）</b>— 同双输出，效率翻倍</li>
+            <li><b>Nidus（豆哥）</b>— 高生存 + 增伤 / 聚怪</li>
+            <li><b>Wisp（花甲）</b>— 加速治疗，保全队续航</li>
+          </ul></div>
+          <div class="sq-col"><h4>备选</h4><ul>
+            <li><b>Octavia（音乐）</b>— 全队增益与隐身节奏</li>
+            <li><b>Jade（翡翠）</b>— 盾位 + 增伤</li>
+            <li><b>Vauban（工程）</b>— 聚怪控场</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 战甲刷取攻略 ============ -->
+  <section class="page" id="page-warframes" data-route="warframes">
+    <div class="page-head">
+      <div class="wrap">
+        <div class="kicker">WARFRAME FARM</div>
+        <h1>战甲刷取攻略</h1>
+        <p class="lead">战甲获取途径多样：暗杀任务、主线任务、氏族道场、赏金与虚空核桃。下面按用途与获取难度整理常用战甲。</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <h2 class="sec-title">新手首选 / 氏族道场</h2>
+      <table class="farm-table">
+        <thead><tr><th>战甲</th><th>获取方式</th><th>难度</th><th>定位 / 说明</th></tr></thead>
+        <tbody>
+          <tr><td>Rhino（牛 / 狂野犀牛）</td><td>金星 Fossa · 暗杀 Jackal</td><td><span class="stars">★</span></td><td>新手第一坦，能扛能输出，先做</td></tr>
+          <tr><td>Excalibur（圣剑 / 咖喱）</td><td>火星 Lech Kril 暗杀</td><td><span class="stars">★</span></td><td>初始三选一 / 通用均衡</td></tr>
+          <tr><td>Volt（电男 / 伏特）</td><td>氏族天诺实验室</td><td><span class="stars">★</span></td><td>初始三选一，加速爆发</td></tr>
+          <tr><td>Mag（磁妹 / 磁力）</td><td>火卫一 The Sergeant 暗杀</td><td><span class="stars">★</span></td><td>初始三选一，控场</td></tr>
+          <tr><td>Wukong（悟空）</td><td>氏族天诺实验室</td><td><span class="stars">★</span></td><td>生存/近战，分身好用</td></tr>
+          <tr><td>Zephyr（鸟 / 狂啸西风）</td><td>氏族天诺实验室</td><td><span class="stars">★</span></td><td>机动 / 控场</td></tr>
+          <tr><td>Banshee（女妖）</td><td>氏族天诺实验室</td><td><span class="stars">★★</span></td><td>声波增伤</td></tr>
+          <tr><td>Nezha（哪吒）</td><td>氏族天诺实验室</td><td><span class="stars">★★</span></td><td>机动 / 生存</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="sec-title">暗杀任务掉落</h2>
+      <table class="farm-table">
+        <thead><tr><th>战甲</th><th>获取方式</th><th>难度</th><th>定位 / 说明</th></tr></thead>
+        <tbody>
+          <tr><td>Ember（火鸡 / 永恒烈焰）</td><td>土星 Sargas Ruk 暗杀</td><td><span class="stars">★★</span></td><td>清图快</td></tr>
+          <tr><td>Frost（冰男 / 冰雪霜寒）</td><td>谷神星 Lech Kril &amp; Vor 暗杀</td><td><span class="stars">★★</span></td><td>防御 / 生存</td></tr>
+          <tr><td>Loki（洛基）</td><td>海王星 Hyena Pack 暗杀</td><td><span class="stars">★★</span></td><td>潜行 / 缴械</td></tr>
+          <tr><td>Ash（阿什 / 灰烬之刃）</td><td>Grineer Manics 掉落</td><td><span class="stars">★★</span></td><td>潜行 / 单体</td></tr>
+          <tr><td>Valkyr（瓦喵 / 瓦尔基里）</td><td>木星 Alad V 暗杀</td><td><span class="stars">★★</span></td><td>近战 / 生存</td></tr>
+          <tr><td>Hydroid（水男 / 惊涛骇浪）</td><td>地球 Vay Hek 暗杀</td><td><span class="stars">★★</span></td><td>掉落 / 控场</td></tr>
+          <tr><td>Oberon（欧贝隆）</td><td>精英怪（Eximus）掉落</td><td><span class="stars">★★</span></td><td>综合辅助</td></tr>
+          <tr><td>Equinox（昼夜）</td><td>天王星 Tyl Regor 暗杀</td><td><span class="stars">★★★</span></td><td>双形态多功能</td></tr>
+          <tr><td>Trinity（奶妈 / 三位一体）</td><td>冥王星 Ambulas 暗杀</td><td><span class="stars">★★★</span></td><td>团队回血回蓝，车队必备</td></tr>
+          <tr><td>Nekros（摸尸 / 亡灵梦魇）</td><td>遗弃船 Lephantis 暗杀</td><td><span class="stars">★★★</span></td><td>掉落加成，刷资源核心</td></tr>
+          <tr><td>Nova（新星 / 加速娃）</td><td>欧罗巴 Raptor 暗杀</td><td><span class="stars">★★★</span></td><td>减速 / 加速控场</td></tr>
+          <tr><td>Saryn（毒妈 / 剧毒之触）</td><td>赛德娜 Kela De Thaym（需审判点数）</td><td><span class="stars">★★★</span></td><td>清场之王</td></tr>
+          <tr><td>Mesa（女枪 / 圣枪弥撒）</td><td>阋神星 异变 Alad V（需《患者零号》+钥匙）</td><td><span class="stars">★★★</span></td><td>自动锁敌输出</td></tr>
+          <tr><td>Atlas（土甲 / 撼天刑者）</td><td>阋神星 Jordas 魔像 暗杀</td><td><span class="stars">★★★</span></td><td>近战 / 肉坦</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="sec-title">主线 / 任务奖励</h2>
+      <table class="farm-table">
+        <thead><tr><th>战甲</th><th>获取方式</th><th>难度</th><th>定位 / 说明</th></tr></thead>
+        <tbody>
+          <tr><td>Limbo（灵薄狱）</td><td>《灵薄狱定理》任务</td><td><span class="stars">★★</span></td><td>控场 / 点控</td></tr>
+          <tr><td>Mirage（小丑 / 幻影）</td><td>《隐秘讯息》任务</td><td><span class="stars">★★</span></td><td>增伤 / 分身</td></tr>
+          <tr><td>Titania（蝶妹 / 幻蝶仙灵）</td><td>《银树林》任务</td><td><span class="stars">★★</span></td><td>高速 / 飞行</td></tr>
+          <tr><td>Inaros（沙甲 / 沙海怒涛）</td><td>奸商《Inaros之沙》任务</td><td><span class="stars">★★</span></td><td>肉坦</td></tr>
+          <tr><td>Excalibur Umbra（暗影圣剑）</td><td>主线《牺牲》</td><td><span class="stars">★★</span></td><td>剧情必得</td></tr>
+          <tr><td>Octavia（音乐 / 女音）</td><td>《Octavia序曲》任务</td><td><span class="stars">★★★</span></td><td>全队增益 / 隐身</td></tr>
+          <tr><td>Harrow（哈罗）</td><td>《Harrow的枷锁》+ 特殊掉落</td><td><span class="stars">★★★</span></td><td>爆头辅助</td></tr>
+          <tr><td>Protea（茶妹 / 泊时灵械）</td><td>《死锁协议》任务（格拉努虚空）</td><td><span class="stars">★★★</span></td><td>工具人 / 输出</td></tr>
+          <tr><td>Xaku（哈库）</td><td>《惊惧之心》+ 魔胎之境赏金</td><td><span class="stars">★★★</span></td><td>多技能组合</td></tr>
+          <tr><td>Sevagoth（鬼甲）</td><td>《暴风雨的呼唤》+ 虚空风暴</td><td><span class="stars">★★★</span></td><td>增伤 / 控制</td></tr>
+          <tr><td>Yareli（亚雷利）</td><td>《逐浪者》任务 + 氏族</td><td><span class="stars">★★</span></td><td>滑板机动</td></tr>
+          <tr><td>Dagath（达格斯）</td><td>《达格斯的传说》任务</td><td><span class="stars">★★</span></td><td>输出</td></tr>
+          <tr><td>Kullervo（库洛维）</td><td>双衍（Duviri）· 库洛维的灾祸</td><td><span class="stars">★★</span></td><td>暴击近战</td></tr>
+          <tr><td>Styanax（斯迪亚纳斯）</td><td>《暴风雨武士》任务</td><td><span class="stars">★★</span></td><td>战吼 / 盾枪</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="sec-title">赏金 / 开放世界 / 集团声望</h2>
+      <table class="farm-table">
+        <thead><tr><th>战甲</th><th>获取方式</th><th>难度</th><th>定位 / 说明</th></tr></thead>
+        <tbody>
+          <tr><td>Gara（玻璃 / 琉璃侍女）</td><td>《萨娅的守夜》+ 希图斯赏金</td><td><span class="stars">★★</span></td><td>输出 / 防守</td></tr>
+          <tr><td>Khora（猫甲）</td><td>圣殿突袭（Sanctuary Onslaught）</td><td><span class="stars">★★★</span></td><td>聚怪 / 点控</td></tr>
+          <tr><td>Revenant（夜灵甲 / 徘徊夜灵）</td><td>希图斯赏金 + 《亡灵的面具》</td><td><span class="stars">★★★</span></td><td>控场 / 生存</td></tr>
+          <tr><td>Wisp（花甲）</td><td>木星 Ropalolyst（需《惊惧之心》前置）</td><td><span class="stars">★★★</span></td><td>增伤 / 加速，热门辅助</td></tr>
+          <tr><td>Garuda（噶露达）</td><td>金星福尔图娜赏金 + 《索拉里斯之声》</td><td><span class="stars">★★★</span></td><td>输出 / 生存</td></tr>
+          <tr><td>Baruuk（武增）</td><td>索拉里斯之声 声望</td><td><span class="stars">★★★</span></td><td>减伤 / 近战</td></tr>
+          <tr><td>Hildryn（母牛 / 重装武神）</td><td>索拉里斯之声 声望 + Exploiter 蛛母</td><td><span class="stars">★★★★</span></td><td>护盾坦克</td></tr>
+          <tr><td>Lavos（拉沃斯）</td><td>火卫二 殁世幽都 声望</td><td><span class="stars">★★★</span></td><td>元素爆发</td></tr>
+          <tr><td>Caliban（卡利班）</td><td>殁世幽都（科维兽）声望 / 新纪之战</td><td><span class="stars">★★★</span></td><td>召唤 / 输出（另有 Prime）</td></tr>
+          <tr><td>Gyre（提拉）</td><td>扎里曼 赏金</td><td><span class="stars">★★★</span></td><td>电系爆发</td></tr>
+          <tr><td>Voruna（沃鲁纳）</td><td>Lua 月球 结合生存</td><td><span class="stars">★★★</span></td><td>猎杀近战</td></tr>
+          <tr><td>Citrine（黄晶）</td><td>火星 镜像防御</td><td><span class="stars">★★</span></td><td>增伤 / 生存</td></tr>
+          <tr><td>Dante（但丁）</td><td>火卫二 Armatus 中断（Disruption）</td><td><span class="stars">★★★</span></td><td>法术支援 / 输出</td></tr>
+          <tr><td>Qorvex（黑曜）</td><td>圣所（墙中之声）/ 殁世幽都</td><td><span class="stars">★★★</span></td><td>辐射坦克</td></tr>
+          <tr><td>Jade（翡翠）</td><td>《翡翠之影》+ 天王星 Brutus 飞升</td><td><span class="stars">★★★</span></td><td>盾位 / 增伤</td></tr>
+          <tr><td>Koumei（库梅）</td><td>1999 / 六人组</td><td><span class="stars">★★★</span></td><td>运气型输出</td></tr>
+          <tr><td>Cyte-09（老九）</td><td>1999 / 六人组</td><td><span class="stars">★★★</span></td><td>狙击弱点流</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="sec-title">特殊获取</h2>
+      <table class="farm-table">
+        <thead><tr><th>战甲</th><th>获取方式</th><th>难度</th><th>定位 / 说明</th></tr></thead>
+        <tbody>
+          <tr><td>Vauban（工程 / 工程统帅）</td><td>午夜电波商店（狼币兑换）</td><td><span class="stars">★★</span></td><td>聚怪控场</td></tr>
+          <tr><td>Nyx（脑溢血）</td><td>入侵任务（Phorid）掉落</td><td><span class="stars">★★</span></td><td>控场 / 精神</td></tr>
+          <tr><td>Gauss（高斯）</td><td>塞德娜 中断（Disruption）</td><td><span class="stars">★★★</span></td><td>高速爆发</td></tr>
+          <tr><td>Grendel（肥宅）</td><td>仲裁兑换探测器后打欧罗巴任务</td><td><span class="stars">★★★★</span></td><td>肉坦 / 增伤</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <h3>Prime 版本怎么来</h3>
+        <p>Prime（圣装）战甲通过<b>虚空核桃开裂</b>获得部件，或在<b>交易频道 / Warframe Market</b>购买完整套装。刚出库、热门圣装价格较高；出库（Vaulted）后会涨价，把握轮换时机。优先做自己常玩的 Prime。</p>
+      </div>
+      <div class="note">以上获取方式为当前常用来源，随版本更新可能调整，请以游戏内为准。表中「难度」为获取流程复杂度参考。</div>
+    </div>
+  </section>
+
+  <!-- ============ 武器刷取攻略 ============ -->
+  <section class="page" id="page-weapons" data-route="weapons">
+    <div class="page-head">
+      <div class="wrap">
+        <div class="kicker">WEAPON FARM</div>
+        <h1>武器刷取攻略</h1>
+        <p class="lead">武器来源同样多样：任务、道场、模块锻造、利奇/姐妹、虚空核桃。按类别整理实用获取路径。</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <h2 class="sec-title">前期好用武器</h2>
+      <div class="cards">
+        <div class="card"><h3>驱魔之刃（Xoris）</h3><p>《死锁协议》任务获取，投掷/近战两用，出手清场能力强，萌新时期非常实用。</p></div>
+        <div class="card"><h3>基础蓝图武器</h3><p>市场买蓝图、铸造仓制作。用「顺手 + 满级」攒段位，别急着追极品。</p></div>
+        <div class="card"><h3>签到与午夜电波</h3><p>每日签到和午夜电波会给阶段性强力武器，记得按时领取。</p></div>
+      </div>
+
+      <h2 class="sec-title">模块化 / 特殊武器</h2>
+      <div class="cards">
+        <div class="card"><h3>Zaw（扎乌）近战模块</h3><p>地球希图斯锻造，部件自由组合，打造属于你的专属近战。</p></div>
+        <div class="card"><h3>赤毒武器（Kuva）</h3><p>击败<b>赤毒利奇</b>获得，如赤毒札尔、赤毒沙皇，属性强力。</p></div>
+        <div class="card"><h3>深潭武器（Tenet）</h3><p>击败<b>帕尔沃斯姐妹</b>获得，强力与收藏两相宜。</p></div>
+        <div class="card"><h3>伊格尼斯亡魂等道场武器</h3><p>氏族道场研究，特定强力武器可复制蓝图，性价比高。</p></div>
+      </div>
+
+      <h2 class="sec-title">Prime 武器</h2>
+      <div class="callout">
+        <h3>获取与取舍</h3>
+        <p>Prime（圣装）武器部件通过<b>虚空核桃</b>开裂获得，或直接<b>交易购买完整套装</b>。热门 Prime 武器如圣装伊格尼斯、圣装沙皇等是后期主力。同样遵循「刚出库价高、出库后涨价」的规律，先做自己主战常用的。</p>
+      </div>
+
+      <h2 class="sec-title">获取优先级建议</h2>
+      <ol class="rule-list">
+        <li><div class="rule-ic"><span>01</span></div><div class="rule-body"><h3>先用顺手武器推图</h3><p>前期不追极品，把顺手武器升满，保证段位与推图节奏。</p></div></li>
+        <li><div class="rule-ic"><span>02</span></div><div class="rule-body"><h3>解锁主线即做驱魔之刃</h3><p>性价比极高的前期主力，帮助平稳过渡到中期。</p></div></li>
+        <li><div class="rule-ic"><span>03</span></div><div class="rule-body"><h3>中期攒核桃做常用 Prime</h3><p>把核桃囤起来，优先做自己主玩位置的 Prime 武器。</p></div></li>
+        <li><div class="rule-ic"><span>04</span></div><div class="rule-body"><h3>后期刷利奇/姐妹武器</h3><p>车队成熟后再投入赤毒/深潭武器，收益最大化。</p></div></li>
+      </ol>
+      <div class="note">以上为通用获取路径参考，具体蓝图、掉落与轮换以游戏当前版本为准。</div>
+    </div>
+  </section>
+
+  <!-- ============ 游戏黑话 ============ -->
+  <section class="page" id="page-slang" data-route="slang">
+    <div class="page-head">
+      <div class="wrap">
+        <div class="kicker">WARFRAME LINGO</div>
+        <h1>游戏黑话</h1>
+        <p class="lead">组队、交易、看攻略、逛论坛，满屏黑话看不懂？这份词典帮你快速对上暗号。</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <h2 class="sec-title">装备 / 机制</h2>
+      <div class="lexicon">
+        <div class="lex-item"><b>圣装 / P甲 / Prime</b><span>战甲或武器的圣装（Prime）版本，属性更高、可装更多极化</span></div>
+        <div class="lex-item"><b>核桃 / 遗物（Relic）</b><span>虚空遗物，开裂获得 Prime 部件</span></div>
+        <div class="lex-item"><b>出库 / 入库</b><span>圣装退出/进入虚空遗物掉落（Vaulted），出库后价格通常上涨</span></div>
+        <div class="lex-item"><b>紫卡 / 裂罅（Riven）</b><span>随机属性的强力 Mod，可洗词条，可交易</span></div>
+        <div class="lex-item"><b>极化（Forma）</b><span>给装备打槽位极性，增加容量与配卡空间</span></div>
+        <div class="lex-item"><b>4K / 腐化 Mod</b><span>火卫二龙钥宝库刷的堕落 Mod（盲怒、心志偏狭、过度延展等）</span></div>
+        <div class="lex-item"><b>钢化 / 镀层 Mod</b><span>高难玩法（仲裁等）出的强化 Mod</span></div>
+        <div class="lex-item"><b>大嘴（Helminth）</b><span>火卫二的共生体，可把满级战甲的技能移植到其他战甲</span></div>
+        <div class="lex-item"><b>专精 / 回响（Focus）</b><span>第二梦解锁的被动成长系统</span></div>
+        <div class="lex-item"><b>赋能（Arcane）</b><span>战甲 / 武器专属的强化饰品</span></div>
+        <div class="lex-item"><b>灵化（Incarnon）</b><span>特定武器解锁的形态切换，如执法者灵化</span></div>
+      </div>
+
+      <h2 class="sec-title">玩法 / 场景</h2>
+      <div class="lexicon">
+        <div class="lex-item"><b>深空 / 钢铁回廊</b><span>高难无尽玩法，出灵化武器与高价值 Mod</span></div>
+        <div class="lex-item"><b>九重天（Railjack）</b><span>舰船玩法，出特殊材料与战甲部件</span></div>
+        <div class="lex-item"><b>仲裁（Arbitration）</b><span>高难耐久玩法，出钢化 Mod 与紫卡</span></div>
+        <div class="lex-item"><b>钢铁之路</b><span>星图通关后开启的高难模式，敌人全面强化</span></div>
+        <div class="lex-item"><b>夜灵狩猎（Eidolon）</b><span>平原夜间打兆力使 / 夜灵 / 巨力使，掉赋能</span></div>
+        <div class="lex-item"><b>利奇 / 玄骸（Lich）</b><span>赤毒利奇，击败获得赤毒武器</span></div>
+        <div class="lex-item"><b>姐妹（Sister）</b><span>帕尔沃斯姐妹，击败获得深潭武器</span></div>
+        <div class="lex-item"><b>中断（Disruption）</b><span>守护导管的高难无尽玩法</span></div>
+        <div class="lex-item"><b>赏金（Bounty）</b><span>开放世界的日常任务，给战甲部件与声望</span></div>
+        <div class="lex-item"><b>圣殿突袭（Sanctuary Onslaught）</b><span>高强度刷经验 / 战甲的玩法</span></div>
+        <div class="lex-item"><b>暗杀（Assassination）</b><span>打 BOSS 掉战甲部件的任务</span></div>
+        <div class="lex-item"><b>虚空裂缝</b><span>开核桃的裂缝任务</span></div>
+      </div>
+
+      <h2 class="sec-title">战甲外号</h2>
+      <div class="lexicon">
+        <div class="lex-item"><b>摸尸 / 亡灵梦魇</b><span>Nekros，三技能增加掉落</span></div>
+        <div class="lex-item"><b>奶妈 / 三位一体</b><span>Trinity，回血回蓝</span></div>
+        <div class="lex-item"><b>毒妈 / 剧毒之触</b><span>Saryn，孢子清场</span></div>
+        <div class="lex-item"><b>女枪 / 圣枪弥撒</b><span>Mesa，自动锁敌输出</span></div>
+        <div class="lex-item"><b>猫甲</b><span>Khora，猫笼聚怪</span></div>
+        <div class="lex-item"><b>玻璃 / 琉璃侍女</b><span>Gara</span></div>
+        <div class="lex-item"><b>沙甲 / 沙海怒涛</b><span>Inaros，肉坦</span></div>
+        <div class="lex-item"><b>工程 / 工程统帅</b><span>Vauban，聚怪控场</span></div>
+        <div class="lex-item"><b>花甲</b><span>Wisp，加速治疗</span></div>
+        <div class="lex-item"><b>加速娃 / 新星</b><span>Nova，分子填充加速 / 减速</span></div>
+        <div class="lex-item"><b>鬼甲</b><span>Sevagoth</span></div>
+        <div class="lex-item"><b>肥宅</b><span>Grendel</span></div>
+        <div class="lex-item"><b>茶妹</b><span>Protea</span></div>
+        <div class="lex-item"><b>女妖</b><span>Banshee</span></div>
+        <div class="lex-item"><b>蝶妹 / 幻蝶仙灵</b><span>Titania</span></div>
+        <div class="lex-item"><b>老九</b><span>Cyte-09，狙击弱点流</span></div>
+        <div class="lex-item"><b>火鸡 / 永恒烈焰</b><span>Ember</span></div>
+        <div class="lex-item"><b>牛 / 狂野犀牛</b><span>Rhino</span></div>
+        <div class="lex-item"><b>咖喱 / 圣剑</b><span>Excalibur</span></div>
+        <div class="lex-item"><b>磁妹 / 磁力</b><span>Mag</span></div>
+        <div class="lex-item"><b>电男 / 伏特</b><span>Volt</span></div>
+        <div class="lex-item"><b>夜灵甲 / 徘徊夜灵</b><span>Revenant</span></div>
+      </div>
+
+      <h2 class="sec-title">车队 / 沟通</h2>
+      <div class="lexicon">
+        <div class="lex-item"><b>增伤 / 缓冲</b><span>给全队加伤害或攻速的辅助</span></div>
+        <div class="lex-item"><b>聚怪</b><span>把敌人拉成一团的控场</span></div>
+        <div class="lex-item"><b>清场 / 地图炮</b><span>大范围秒杀小怪的输出</span></div>
+        <div class="lex-item"><b>破盾</b><span>集中输出打护盾（如夜灵弱化护盾）</span></div>
+        <div class="lex-item"><b>拉诱饵</b><span>控制夜灵诱饵同步充能</span></div>
+        <div class="lex-item"><b>主机 / 客机</b><span>房主与加入者；主机网络负担大</span></div>
+        <div class="lex-item"><b>带躺 / 带飞</b><span>老玩家带新手过关</span></div>
+        <div class="lex-item"><b>挂机</b><span>不操作蹭队（通常被反感，别做）</span></div>
+        <div class="lex-item"><b>掉线 / 掉帧</b><span>网络或性能问题</span></div>
+      </div>
+
+      <h2 class="sec-title">交易 / 资源</h2>
+      <div class="lexicon">
+        <div class="lex-item"><b>白金（Platinum）</b><span>游戏内付费 / 交易货币</span></div>
+        <div class="lex-item"><b>阿耶（Aya）</b><span>兑换出库核桃的素材</span></div>
+        <div class="lex-item"><b>杜卡德金币（Ducats）</b><span>奸商兑换货币，圣装部件换</span></div>
+        <div class="lex-item"><b>指数之场</b><span>刷现金的高收益玩法</span></div>
+        <div class="lex-item"><b>午夜电波 / 狼币</b><span>赛季任务与其兑换货币</span></div>
+        <div class="lex-item"><b>奸商（Baro）</b><span>每两周来的限时商人，卖稀有 Mod 与物品</span></div>
+        <div class="lex-item"><b>国服 / 国际服</b><span>服务器差异，交易与活动不同步</span></div>
+      </div>
+      <div class="note">黑话会随版本与玩家习惯变化，遇到没收录的说法，群里问一声老玩家就懂了。</div>
+    </div>
+  </section>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="foot-brand">DREAM IN SLUMBER</div>
+      <p>以梦为舟 · 逐梦星图。本站为氏族玩家指南，非官方作品；星际战甲为 Digital Extremes 的注册商标，本站与其无关联。</p>
+    </div>
+  </footer>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
